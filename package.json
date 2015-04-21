@@ -9,6 +9,7 @@
   "author": "Zainul Franciscus",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.6.4",
     "gulp": "^3.8.11",
     "gulp-inline-css": "^2.0.0"
   }
