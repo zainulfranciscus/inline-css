@@ -1,0 +1,15 @@
+{
+  "name": "inline-css",
+  "version": "1.0.0",
+  "description": "a tool that put inline css into HTML files",
+  "main": "build/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zainul Franciscus",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-inline-css": "^2.0.0"
+  }
+}
