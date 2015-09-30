@@ -1,6 +1,7 @@
  var gulp = require('gulp'),
      inlineCss = require('gulp-inline-css'),
-     browsersync = require('browser-sync');
+     browsersync = require('browser-sync')
+     mail = require('gulp-mail');
 
  // file locations
 var
@@ -25,6 +26,31 @@ gulp.task('inline-css',function(){
 		   .pipe(gulp.dest(dest))
 		   .pipe(browsersync.reload({ stream: true }));
 });
+
+//send mail:
+
+var smtpInfo = {
+  auth: {
+    user: 'zainul.franciscus.ge@gmail.com',
+    pass: 'm00n1te!'
+  },
+  host: 'smtp.gmail.com',
+  secureConnection: true,
+  port: 465
+}
+
+gulp.task('mail', function() {
+  return gulp.src(dest + 'index.html')
+    .pipe(mail({
+      subject: 'Surprise!?',
+      to: [
+        '0b0669c5e8@emailtests.com'
+      ],
+      from: 'Foo <foo@163.com>',
+      smtp: smtpInfo
+    }))
+})
+
 
 //this task will reload a browser using browser-sync
 var syncOpts = {
