@@ -31,8 +31,8 @@ gulp.task('inline-css',function(){
 
 var smtpInfo = {
   auth: {
-    user: 'zainul.franciscus.ge@gmail.com',
-    pass: 'm00n1te!'
+    user: '[enter an email address]',
+    pass: '[password for that email]'
   },
   host: 'smtp.gmail.com',
   secureConnection: true,
@@ -44,7 +44,7 @@ gulp.task('mail', function() {
     .pipe(mail({
       subject: 'Surprise!?',
       to: [
-        '0b0669c5e8@emailtests.com'
+        'zainul.franciscus@gmail.com' 
       ],
       from: 'Foo <foo@163.com>',
       smtp: smtpInfo
